@@ -137,6 +137,23 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
 }
 @media (max-width:520px){.steps{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* Preços */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.8rem;align-items:stretch}
+.plan{position:relative;display:flex;flex-direction:column;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:1.6rem}
+.plan.top{background:var(--sun);box-shadow:8px 8px 0 var(--ink)}
+.plan h3{font-size:1.5rem;font-weight:800}
+.plan .for{margin-top:.3rem;font-size:.95rem;color:var(--mute)}
+.plan.top .for{color:var(--ink)}
+.plan .price{font-family:var(--display);font-weight:800;font-size:2.2rem;line-height:1;margin:1.1rem 0}
+.plan .price small{font-family:var(--body);font-size:.9rem;font-weight:500}
+.plan ul{list-style:none;padding:0;display:grid;gap:.45rem;margin-bottom:1.5rem}
+.plan li::before{content:"✓ ";font-weight:800;color:var(--cobalt)}
+.plan .btn{margin-top:auto;text-align:center}
+.plan.top .btn{background:var(--ink);color:#fff}
+.badge{position:absolute;top:-15px;right:1rem;background:var(--coral);color:#fff;border:3px solid var(--ink);border-radius:99px;padding:.1rem .8rem;font-size:.8rem;font-weight:800}
+.plans-note{margin-top:2.2rem;padding:1.1rem 1.4rem;border:2px dashed var(--ink);border-radius:14px;color:var(--mute)}
+.plans-note b{color:var(--ink)}
+@media (max-width:860px){.plans{grid-template-columns:1fr}.plan.top{box-shadow:none}}
 </style>
 </head>
 <body>
@@ -149,6 +166,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#processo">Como trabalho</a></li>
       <li><a href="#exemplos">Exemplos</a></li>
+      <li><a href="#precos">Preços</a></li>
       <li><a href="#contacto" class="btn" style="padding:.5rem 1.1rem">Pedir orçamento</a></li>
     </ul>
   </nav>
@@ -244,6 +262,54 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
       <div class="mock m3"><div class="scr"><b>Oficina Rápida</b><small>Revisões e reparações sem demoras</small></div><div class="cap">Oficina <span>Conceito</span></div></div>
     </div>
     <p class="note">Este site também é um exemplo do meu trabalho: foi feito do zero, é leve, responsivo e funciona sem plugins.</p>
+  </div>
+</section>
+
+<section id="precos">
+  <div class="wrap">
+    <h2>Quanto custa</h2>
+    <p class="intro">Três pacotes para começar. O valor final depende do que o seu negócio precisa, e o orçamento é sempre fechado.</p>
+    <div class="plans">
+
+      <div class="plan">
+        <h3>Presença Digital</h3>
+        <p class="for">Cafés, oficinas, cabeleireiros: credibilidade online rápida.</p>
+        <div class="price">300–600€</div>
+        <ul>
+          <li>Site de página única, 100% mobile</li>
+          <li>Formulário, botão de chamada e WhatsApp</li>
+          <li>Alojamento sem mensalidade</li>
+        </ul>
+        <a class="btn alt" href="#contacto">Pedir orçamento</a>
+      </div>
+
+      <div class="plan top">
+        <span class="badge">Mais procurado</span>
+        <h3>Expansão</h3>
+        <p class="for">Clínicas, escritórios e serviços que querem ser encontrados no Google.</p>
+        <div class="price">600–1200€</div>
+        <ul>
+          <li>Várias páginas, uma por serviço</li>
+          <li>SEO e ligação ao Google Maps</li>
+          <li>Código leve e ultrarrápido</li>
+        </ul>
+        <a class="btn" href="#contacto">Pedir orçamento</a>
+      </div>
+
+      <div class="plan">
+        <h3>Negócio Dinâmico</h3>
+        <p class="for">Lojas online, reservas e sites que precisa de gerir sozinho.</p>
+        <div class="price"><small>a partir de </small>1500€</div>
+        <ul>
+          <li>Loja com MB WAY, Multibanco e cartões</li>
+          <li>Painel de gestão fácil de usar</li>
+          <li>Base de dados e segurança reforçada</li>
+        </ul>
+        <a class="btn alt" href="#contacto">Pedir orçamento</a>
+      </div>
+
+    </div>
+    <p class="plans-note"><b>Gestão anual (100–200€/ano):</b> tratamos da renovação do domínio e de pequenas atualizações de textos e imagens. Disponível para os pacotes 1 e 2.</p>
   </div>
 </section>
 
